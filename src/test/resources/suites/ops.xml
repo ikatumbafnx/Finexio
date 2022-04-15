@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HFD Smoke Test" verbose="1" parallel="tests" thread-count="1">
+    <test name="Operations Portal">
+        <parameter name="browser" value="chrome"/>
+        <packages>
+            <package name="com.hfd.test.ops" />
+        </packages>
+    </test>
+</suite>

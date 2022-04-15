@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="HFD All Web Portals Tests" verbose="1" parallel="tests" thread-count="1">
+<parameter name="browser" value="chrome"/>
+    <test name="Providers Portal">
+        <packages>
+            <package name="com.hfd.test.providers" />
+        </packages>
+    </test>
+    <test name="Customers Portal">
+        <packages>
+            <package name="com.hfd.test.customers" />
+        </packages>
+    </test>
+    <test name="OPS Portal">
+        <packages>
+            <package name="com.hfd.test.ops" />
+        </packages>
+    </test>
+</suite>
