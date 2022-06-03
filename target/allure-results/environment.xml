@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><environment><parameter><key>Test URL</key><value>https://dev-api.gohfd.com/app/v0</value></parameter><parameter><key>Target execution</key><value>local</value></parameter><parameter><key>Environment</key><value>easydev</value></parameter><parameter><key>Global timeout</key><value>20</value></parameter></environment>

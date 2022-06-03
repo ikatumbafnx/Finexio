@@ -1,0 +1,43 @@
+HTTP/1.1 200 OK
+Date: Thu, 02 Jun 2022 19:06:04 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 562
+Connection: keep-alive
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Request-Context: appId=cid-v1:ea821262-ab3f-4c4c-bb5c-9876992c915c
+X-Powered-By: ASP.NET
+
+{
+    "Result": {
+        "Links": [
+            {
+                "Url": "https://tinyurl.com/pnntpt4a",
+                "Rel": "redirect",
+                "Action": "GET"
+            },
+            {
+                "Url": "https://tinyurl.com/pnntpt4a",
+                "Rel": "provider_redirect",
+                "Action": "GET"
+            },
+            {
+                "Url": "app/peek",
+                "Rel": "peek",
+                "Action": "POST"
+            },
+            {
+                "Url": "https://dev-accounts-appservice.azurewebsites.net/5564648",
+                "Rel": "get_account",
+                "Action": "GET"
+            }
+        ],
+        "Id": "62990a1851322d2f744d5bcc",
+        "Token": "e10dRNj50nq2nzd3ecbO2AvZaOI4LiKvPePv1YB3EzIfOrIjg44OeyrAPjlTRndQIHn9Gsb2ZGS-j9U-hBAVlLI8tFTygF50ftiEvGB3CIXWaw%7e",
+        "Disposition": "Approved",
+        "ApprovalAmount": 5000,
+        "ReferenceId": "AB93802983883",
+        "Expires": "2022-08-31T19:06:04.3425416+00:00",
+        "AccountId": "5564648"
+    }
+}

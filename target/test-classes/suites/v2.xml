@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="API Webservice Calls" verbose="1" parallel="tests" thread-count="1">
+  
+    <test name="Happy Path - V2 Original">
+        <classes>
+            <class name="com.hfd.test.webservices.v2.FullAppJourneyTest" />
+        </classes>
+    </test> 
+     <test name="Regression - V2 Original">
+        <classes>
+            <class name="com.hfd.test.webservices.v2.V2ErrorValidations" />
+        </classes>
+    </test>        
+
+</suite>

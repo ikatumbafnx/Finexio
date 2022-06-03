@@ -1,0 +1,71 @@
+HTTP/1.1 200 OK
+Date: Thu, 02 Jun 2022 19:06:06 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 681
+Connection: keep-alive
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Request-Context: appId=cid-v1:ea821262-ab3f-4c4c-bb5c-9876992c915c
+X-Powered-By: ASP.NET
+
+{
+    "Result": {
+        "Session": {
+            "ReferenceId": "AB93802983883",
+            "InternalId": "5564648",
+            "Created": "2022-06-02T19:06:00.9162532+00:00",
+            "ProviderId": "15357",
+            "Application": {
+                "PaymentMethods": [
+                    
+                ],
+                "Treatment": {
+                    "TotalCost": 2000,
+                    "Scheduled": "2022-06-02T00:00:00+00:00",
+                    "Services": [
+                        
+                    ]
+                },
+                "Options": {
+                    "IsForPrequalification": true
+                },
+                "Applicants": [
+                    {
+                        "Type": "Primary",
+                        "FirstName": "John",
+                        "LastName": "Doe",
+                        "DOB": "2002-01-04T00:00:00",
+                        "NationalId": "123456789",
+                        "Address": {
+                            "StreetLine1": "89 Lake St",
+                            "StreetLine2": "Suite 89",
+                            "City": "San Francisco",
+                            "Statoid": "CA",
+                            "PostalCode": "89845"
+                        },
+                        "Communications": [
+                            {
+                                "Value": "qaautomation@healthcarefinancedirect.com",
+                                "Type": "Email",
+                                "Priority": 0
+                            },
+                            {
+                                "Value": "6615562886",
+                                "Type": "Mobile",
+                                "Priority": 0
+                            }
+                        ],
+                        "Locale": "en-us"
+                    }
+                ],
+                "Created": "2022-06-02T19:06:06.6313087+00:00"
+            },
+            "Options": {
+                "IsTest": true,
+                "LinkExpirationInDays": 90,
+                "ShortenUrl": true,
+                "Theme": "HFD"
+            }
+        }
+    }
+}

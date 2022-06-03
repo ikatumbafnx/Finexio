@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="API Webservice Calls V2.1" verbose="1" parallel="tests" thread-count="1">
+  
+    <test name="Min Application - V2.1">
+        <classes>
+            <class name="com.hfd.test.webservices.v2.FullAppVersion21" />
+        </classes>
+    </test>   
+
+</suite>

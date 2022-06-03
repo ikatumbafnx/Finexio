@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.finixio.utils.DatabaseUtils;
+import com.finexio.utils.DatabaseUtils;
 
 /**
  * @author Ivan Katumba on 10/28/2021
