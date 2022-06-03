@@ -1,7 +1,6 @@
 package com.finexio.config;
 
 import org.aeonbits.owner.Config;
-import org.aeonbits.owner.Config.Key;
 
 /**
  * @author Ivan Katumba on 10/20/2021
@@ -11,7 +10,5 @@ import org.aeonbits.owner.Config.Key;
 @Config.Sources({ "system:properties", "classpath:errorcodes.properties" })
 public interface ErrorDictionary extends Config {
 
-    @Key("1065")
-    String Err1065();
-
+   
 }

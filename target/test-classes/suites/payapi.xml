@@ -1,9 +1,0 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="PAY API Webservice Calls" verbose="1" parallel="tests" thread-count="1">
-     <test name="PAY APIs Tests">
-        <packages>
-            <package name="com.hfd.test.webservices.PayAPI" />
-        </packages>
-    </test>   
-
-</suite>

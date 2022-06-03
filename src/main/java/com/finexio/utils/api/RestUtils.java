@@ -14,17 +14,7 @@ import io.restassured.specification.RequestSpecification;
  */
 public class RestUtils {
 
-    public Response getGETReponse(Object json, String service) {
-
-        RestAssured.baseURI = "https://api.zippopotam.us";
-        RequestSpecification httpRequest = RestAssured.given();
-        httpRequest.header("Content-type", "application/json");
-        httpRequest.body(json.toString());
-
-        Response response = httpRequest.request(Method.GET, service);
-
-        return response;
-    }
+    
 
     public Response getPOSTReponse(Object json, String service) {
 

@@ -1,10 +1,11 @@
 package com.finexio;
 
-import com.finexio.report.AllureManager;
-import com.finexio.utils.ExcelUtils;
-import com.finexio.utils.azureTestCaseUtil;
-import com.finexio.utils.api.LogListerner;
-import com.github.javafaker.Faker;
+import static com.finexio.config.ConfigurationManager.configuration;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.testng.Assert;
 import org.testng.ITestContext;
@@ -15,15 +16,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Listeners;
+
+import com.finexio.report.AllureManager;
+import com.finexio.utils.ExcelUtils;
+import com.finexio.utils.api.LogListerner;
+import com.github.javafaker.Faker;
+
 import helpers.DBHelpers;
-
-import static com.finexio.config.ConfigurationManager.apiConfiguration;
-import static com.finexio.config.ConfigurationManager.configuration;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author Ivan Katumba on 10/12/2021
@@ -104,85 +103,7 @@ public class BaseApi {
                     // baseEnv = configuration().apiendpoint();
                     break;
 
-                case "dev":
-                    envparam.put("baseEnv", apiConfiguration().v3DevServiceurl());
-                    envparam.put("clientID", apiConfiguration().DevclientID());
-                    envparam.put("clientSecret", apiConfiguration().DevclientSecret());
-                    envparam.put("grantType", apiConfiguration().financegrantType());
-                    envparam.put("authUrl", apiConfiguration().v3DevAuthurl());
-                    envparam.put("clientID_QADEV_15356", apiConfiguration().clientID_QADEV_15356());
-                    envparam.put("clientSecret_QADEV_15356", apiConfiguration().clientSecret_QADEV_15356());
-                    envparam.put("clientID_QADEV_15357", apiConfiguration().clientID_QADEV_15357());
-                    envparam.put("clientSecret_QADEV_15357", apiConfiguration().clientSecret_QADEV_15357());
-                    // envparam.put("financeOfferFlag", "0");
-                    break;
-
-                case "sandbox":
-                    envparam.put("baseEnv", apiConfiguration().v3Serviceurl());
-                    envparam.put("clientID_Waterfall", apiConfiguration().clientIDWaterFall());
-                    envparam.put("clientSecret_Waterfall", apiConfiguration().clientSecretWaterFall());
-                    envparam.put("clientID_QA_15356", apiConfiguration().clientID_QA_15356());
-                    envparam.put("clientSecret_QA_15356", apiConfiguration().clientSecret_QA_15356());
-                    envparam.put("clientID_QA_15357", apiConfiguration().clientID_QA_15357());
-                    envparam.put("clientSecret_QA_15357", apiConfiguration().clientSecret_QA_15357());
-                    envparam.put("grantType", apiConfiguration().financegrantType());
-                    envparam.put("authUrl", apiConfiguration().v3Authurl());
-                    envparam.put("financeOfferFlag", dbhelper.getUseFinancePlanFlag("15357"));
-                    break;
-
-                case "easydev":
-                    envparam.put("baseEnv", configuration().easyApiEndPointDev());
-                    envparam.put("clientID", apiConfiguration().sleepArchclientID());
-                    envparam.put("clientSecret", apiConfiguration().SsleepArchClientScreet());
-                    envparam.put("grantType", apiConfiguration().sleepArchgrantType());
-                    envparam.put("authUrl", configuration().easyApiAuthEndPointDev());
-                    break;
-
-                case "easystage":
-                    envparam.put("baseEnv", configuration().easyApiEndPoint());
-                    envparam.put("clientID", apiConfiguration().sleepArchclientID());
-                    envparam.put("clientSecret", apiConfiguration().SsleepArchClientScreet());
-                    envparam.put("grantType", apiConfiguration().sleepArchgrantType());
-                    envparam.put("authUrl", configuration().easyApiAuthEndPoint());
-                    break;
-
-                case "easysandbox":
-                    envparam.put("baseEnv", configuration().easyApiEndPointSandBox());
-                    envparam.put("clientID", apiConfiguration().sleepArchclientIDSandBox());
-                    envparam.put("clientSecret", apiConfiguration().SsleepArchClientScreetStage());
-                    envparam.put("grantType", apiConfiguration().sleepArchgrantType());
-                    envparam.put("authUrl", configuration().easyApiAuthEndPointSadbox());
-                    break;
-
-                case "payapidev":
-                    envparam.put("baseEnv", apiConfiguration().payApiDevBaseUrl());
-                    envparam.put("clientID", apiConfiguration().payApiDevClientID());
-                    envparam.put("clientSecret", apiConfiguration().payApiDevClientSecret());
-                    envparam.put("grantType", apiConfiguration().payApiDevgrantType());
-                    envparam.put("authUrl", apiConfiguration().payApiDevAuthurl());
-                    break;
-
-                case "payapistage":
-                    envparam.put("baseEnv", apiConfiguration().payApiStageBaseUrl());
-                    envparam.put("clientID", apiConfiguration().payApiDevClientID());
-                    envparam.put("clientSecret", apiConfiguration().payApiDevClientSecret());
-                    envparam.put("grantType", apiConfiguration().payApiDevgrantType());
-                    envparam.put("authUrl", apiConfiguration().payApiStageAuthUrl());
-                    break;
-
-                case "prod":
-                    envparam.put("baseEnv", "https://live.hfdapi.com");
-                    envparam.put("clientID", "066288d0-32c2-47c8-b90b-f03ac332153d");
-                    envparam.put("clientSecret", "IfXlqDFBaEWqF5+LCo43Yw==");
-                    envparam.put("grantType", "client_credentials");
-                    envparam.put("authUrl", "https://auth.hfdapi.com");
-                    break;
-
-                // default:
-                // envparam.put("baseEnv", configuration().apiendpoint());
-                // envparam.put("clientID", configuration().apiendpoint());
-                // envparam.put("clientSecret", configuration().apiendpoint());
-                // envparam.put("grantType", configuration().apiendpoint());
+                
             }
         } catch (Exception e) {
 
@@ -199,7 +120,7 @@ public class BaseApi {
     @AfterMethod
     public void afterMethod(ITestResult result) {
 
-        azureTestCaseUtil azureTestCaseUtil = new azureTestCaseUtil();
+       
 
         try {
             if (result.getStatus() == ITestResult.SUCCESS) {
@@ -245,7 +166,7 @@ public class BaseApi {
     @AfterClass
     public void AfterClass(ITestContext context) {
 
-        azureTestCaseUtil azureTestCaseUtil = new azureTestCaseUtil();
+       
 
         int failedtest = context.getFailedTests().getAllResults().size();
         if (failedtest < 1) {
@@ -280,24 +201,9 @@ public class BaseApi {
 
         System.out.println("All the Testcases to update are: " + testcaseslist);
 
-        if (!testcaseslist.isEmpty()) {
-            for (List<String> innerlist : testcaseslist) {
+        
 
-                if (!innerlist.isEmpty()) {
-                    try {
-                        azureTestCaseUtil.updateTestCaseResults(innerlist.get(2),
-                                apiConfiguration().getAzureTestPlanID(), innerlist.get(0),
-                                innerlist.get(1));
-                    } catch (Exception e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
-                    }
-                }
-
-            }
-        }
-
-        testcases.clear();
+      
 
     }
 

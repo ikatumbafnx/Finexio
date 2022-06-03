@@ -1,51 +1,33 @@
-/*
- * MIT License
- *
- * Copyright (c) 2018 Elias Nogueira
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in all
- * copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+
 
 package com.finexio;
+
+import static com.finexio.config.ConfigurationManager.configuration;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.finexio.driver.DriverManager;
 import com.finexio.driver.TargetFactory;
 import com.finexio.report.AllureManager;
-import com.finexio.utils.azureTestCaseUtil;
 import com.finexio.web.base.BaseMethods;
 import com.finexio.web.base.Waiter;
 import com.github.javafaker.Faker;
 
 import helpers.DBHelpers;
 import io.qameta.allure.Step;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.*;
-
-import static com.finexio.config.ConfigurationManager.apiConfiguration;
-import static com.finexio.config.ConfigurationManager.configuration;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Listeners({ TestListener.class })
 public abstract class BaseWeb extends BaseMethods {
@@ -123,14 +105,7 @@ public abstract class BaseWeb extends BaseMethods {
         logger.info("Application is opening " + configuration().customerportal());
     }
 
-    @Step("{0} Verifying their Online Account from Email sent to {1}")
-    protected void verifyaccountviaemail(String firstName, String emailAdress) throws Exception {
-
-        List<String> userid = dbHelpers.getValidationUserID(emailAdress);
-        String verificationLink = configuration().customeraccountverification() + userid.get(0).toLowerCase();
-        DriverManager.startDriver(verificationLink);
-        logger.info("Customer has succesfully verified their account at : " + verificationLink);
-    }
+   
 
     @BeforeSuite
     public void beforeSuite() {
@@ -159,7 +134,7 @@ public abstract class BaseWeb extends BaseMethods {
 
         // }
 
-        azureTestCaseUtil azureTestCaseUtil = new azureTestCaseUtil();
+       
 
         try {
             AllureManager.takeScreenshotToAttachOnAllureReport();
@@ -188,18 +163,7 @@ public abstract class BaseWeb extends BaseMethods {
             e.printStackTrace();
         }
 
-        try {
-            if (testcases.get("TestCaseID") != null) {
-                azureTestCaseUtil.updateTestCaseResults(testcases.get("outcome"),
-                        apiConfiguration().getAzureTestPlanID(), apiConfiguration().getAzureTestSuiteID(),
-                        testcases.get("TestCaseID"));
-            }
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
-        testcases.clear();
+        
 
     }
 

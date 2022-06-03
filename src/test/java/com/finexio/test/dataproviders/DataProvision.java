@@ -8,7 +8,7 @@ import com.finexio.utils.ExcelUtils;
 
 import io.qameta.allure.Step;
 
-public class PayAPICards {
+public class DataProvision {
 
     @Step("Reading all the CreditCard Data")
     @DataProvider(name = "cardData")
