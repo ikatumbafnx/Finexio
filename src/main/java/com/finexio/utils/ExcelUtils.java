@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:52:12
+ * @modify date 2022-06-03 15:52:12
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 import java.io.File;
@@ -19,10 +26,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import io.qameta.allure.Step;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class ExcelUtils {
 
     public static FileInputStream fi;

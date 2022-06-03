@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:53:56
+ * @modify date 2022-06-03 15:53:56
+ * @desc [description]
+ */
 package com.finexio.web.base;
 
 import io.qameta.allure.Step;

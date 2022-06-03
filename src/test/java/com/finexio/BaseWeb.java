@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:56:17
+ * @modify date 2022-06-03 15:56:17
+ * @desc [description]
+ */
 
 
 package com.finexio;
@@ -71,40 +78,12 @@ public abstract class BaseWeb extends BaseMethods {
     @Step("Opening the providers portal")
     protected void startprovidersportal() {
 
-        waiter.get(configuration().providerportal(), DriverManager.getDriver());
+        waiter.get(configuration().webpageurl(), DriverManager.getDriver());
 
-        logger.info("Application is opening " + configuration().providerportal());
+        logger.info("Application is opening " + configuration().webpageurl());
     }
 
-    @Step("Opening the OPS portal")
-    protected void startOPSportal() {
-
-        DriverManager.startDriver(configuration().opsportal());
-        logger.info("Application is opening " + configuration().opsportal());
-    }
-
-    @Step("Opening the providers portal")
-    protected void startMainWebsite() {
-
-        DriverManager.startDriver(configuration().url());
-        logger.info("Application is opening " + configuration().url());
-    }
-
-    @Step("Opening the providers portal")
-    protected void startOriginationPortal() {
-
-        DriverManager.startDriver(configuration().originationportal());
-        logger.info("Application is opening " + configuration().originationportal());
-    }
-
-    @Step("Opening the customers portal")
-    protected void startcustomerportal() {
-
-        waiter.get(configuration().customerportal(), DriverManager.getDriver());
-        // DriverManager.startDriver(configuration().customerportal());
-        logger.info("Application is opening " + configuration().customerportal());
-    }
-
+    
    
 
     @BeforeSuite

@@ -1,8 +1,12 @@
-package com.finexio.exceptions;
 /**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:49:51
+ * @modify date 2022-06-03 15:49:51
+ * @desc [description]
  */
+package com.finexio.exceptions;
+
 public class HeadlessNotSupportedException extends IllegalStateException {
 
     public HeadlessNotSupportedException(String browser) {

@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:55:58
+ * @modify date 2022-06-03 15:55:58
+ * @desc [description]
+ */
 package com.finexio;
 
 import static com.finexio.config.ConfigurationManager.configuration;
@@ -24,10 +31,7 @@ import com.github.javafaker.Faker;
 
 import helpers.DBHelpers;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 @Listeners(LogListerner.class)
 public class BaseApi {
     Faker faker = new Faker();

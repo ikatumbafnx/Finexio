@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:50:53
+ * @modify date 2022-06-03 15:50:53
+ * @desc [description]
+ */
 package com.finexio.utils.api;
 
 import io.qameta.allure.Attachment;
@@ -11,10 +18,7 @@ import org.testng.ITestResult;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class LogListerner implements ITestListener {
     private ByteArrayOutputStream request = new ByteArrayOutputStream();
     private ByteArrayOutputStream response = new ByteArrayOutputStream();

@@ -1,11 +1,15 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:50:43
+ * @modify date 2022-06-03 15:50:43
+ * @desc [description]
+ */
 package com.finexio.utils.api;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.qameta.allure.Step;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class JsonFormatter {
 
     /**

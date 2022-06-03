@@ -1,9 +1,13 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:50:01
+ * @modify date 2022-06-03 15:50:01
+ * @desc [description]
+ */
 
 package com.finexio.exceptions;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class TargetNotValidException extends IllegalStateException {
 
     public TargetNotValidException(String target) {

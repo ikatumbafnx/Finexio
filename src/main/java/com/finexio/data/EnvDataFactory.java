@@ -1,15 +1,16 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:46:35
+ * @modify date 2022-06-03 15:46:35
+ * @desc 
+ */
 package com.finexio.data;
+
+import java.util.Random;
 
 import com.github.javafaker.Faker;
 
-import static com.finexio.config.ConfigurationManager.configuration;
-
-import java.util.Locale;
-import java.util.Random;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
 public class EnvDataFactory {
 
     public String getSaltString() {

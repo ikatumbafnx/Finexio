@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:53:25
+ * @modify date 2022-06-03 15:53:25
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 import java.util.Random;
@@ -8,10 +15,7 @@ import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.*;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class StringUtil {
 
     public static String randomNameFor(String prefix) {

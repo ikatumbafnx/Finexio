@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:51:01
+ * @modify date 2022-06-03 15:51:01
+ * @desc [description]
+ */
 package com.finexio.utils.api;
 
 import java.util.Base64;
@@ -8,10 +15,7 @@ import io.restassured.http.Method;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class RestUtils {
 
     

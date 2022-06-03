@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:52:00
+ * @modify date 2022-06-03 15:52:00
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 
@@ -13,10 +20,7 @@ import java.util.Date;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class DateUtils {
 
     public static String currentTimeInISO8601() {

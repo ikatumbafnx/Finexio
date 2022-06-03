@@ -1,13 +1,17 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:43:56
+ * @modify date 2022-06-03 15:43:56
+ * @desc [description]
+ */
 
 
 package com.finexio.config;
 
 import org.aeonbits.owner.ConfigCache;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class ConfigurationManager {
 
     private ConfigurationManager() {

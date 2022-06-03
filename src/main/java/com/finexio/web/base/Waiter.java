@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:54:44
+ * @modify date 2022-06-03 15:54:44
+ * @desc [description]
+ */
 package com.finexio.web.base;
 
 import org.openqa.selenium.JavascriptExecutor;

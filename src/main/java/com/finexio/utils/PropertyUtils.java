@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:53:12
+ * @modify date 2022-06-03 15:53:12
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 import org.apache.commons.configuration2.PropertiesConfiguration;
@@ -8,10 +15,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class PropertyUtils {
 
     //Class constants

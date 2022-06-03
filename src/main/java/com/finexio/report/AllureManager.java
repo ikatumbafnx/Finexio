@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:50:29
+ * @modify date 2022-06-03 15:50:29
+ * @desc [description]
+ */
 package com.finexio.report;
 
 import com.finexio.driver.DriverManager;
@@ -8,10 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import static com.finexio.config.ConfigurationManager.configuration;
 import static org.openqa.selenium.OutputType.BYTES;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class AllureManager {
 
     private AllureManager() {

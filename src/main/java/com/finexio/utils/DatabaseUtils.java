@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:51:36
+ * @modify date 2022-06-03 15:51:36
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 import org.testng.Assert;
@@ -6,10 +13,7 @@ import static com.finexio.config.ConfigurationManager.configuration;
 
 import java.sql.*;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class DatabaseUtils {
 
     @SuppressWarnings("unused")
@@ -49,9 +53,7 @@ public class DatabaseUtils {
                     databaseurl = configuration().dbserver();
                     break;
 
-                case "sandbox":
-                    databaseurl = configuration().dbsandboxserver();
-                    break;
+               
 
             }
 

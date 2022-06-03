@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:51:24
+ * @modify date 2022-06-03 15:51:24
+ * @desc [description]
+ */
 package com.finexio.utils;
 
 import io.qameta.allure.Step;
@@ -6,13 +13,7 @@ import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
-import java.util.Arrays;
-import java.util.List;
 
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
 public class AssertionUtil {
 
     // Class constants

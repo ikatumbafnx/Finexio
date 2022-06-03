@@ -1,3 +1,10 @@
+/**
+ * @author IvanK
+ * @email ivan@finexio.com
+ * @create date 2022-06-03 15:50:12
+ * @modify date 2022-06-03 15:50:12
+ * @desc [description]
+ */
 package com.finexio.pages;
 
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -6,10 +13,7 @@ import com.finexio.driver.DriverManager;
 
 import static com.finexio.config.ConfigurationManager.configuration;
 import static org.openqa.selenium.support.PageFactory.initElements;
-/**
- * @author Ivan Katumba on 10/12/2021
- * @project HFD-Automation
- */
+
 public class AbstractPageObject {
 
     protected AbstractPageObject() {
